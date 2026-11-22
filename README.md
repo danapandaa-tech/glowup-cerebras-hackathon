@@ -1,8 +1,8 @@
-# GlowUp — Cerebras × Kimi K3.1 Pro × OpenClaw Hackathon Entry
+# GlowUp â€” Cerebras Ã— Kimi K3.1 Pro Ã— OpenClaw Hackathon Entry
 
-**An agent took a 2003-era website and shipped an Awwwards-grade rebuild to production — including a deploy nobody asked for.**
+**An agent took a 2003-era website and shipped an Awwwards-grade rebuild to production â€” including a deploy nobody asked for.**
 
-*#KimiOnCerebras · [Live site](https://rustic-roasters-coffee.vercel.app/)*
+*#KimiOnCerebras Â· [Live site](https://rustic-roasters-coffee.vercel.app/)*
 
 ## What it does
 
@@ -13,20 +13,21 @@ GlowUp is a high-end web-designer agent built on the OpenClaw harness, powered b
 
 The pipeline the agent ran autonomously:
 
-1. **Read** the legacy site (`before/rustic-roasters.html` — Comic Sans, marquees, visitor counter)
+1. **Read** the legacy site (`before/rustic-roasters.html` â€” Comic Sans, marquees, visitor counter)
 2. **Rewrite** it as a single self-contained page (~65 KB): dark-luxe espresso palette, editorial serif + grotesk type pairing, scroll-reveal motion, `prefers-reduced-motion` respected, premium brand copy (real content, no lorem ipsum)
 3. **Document** its own design system (`DESIGN.md`)
 4. **Verify** the render in a browser
-5. **Deploy to Vercel — unprompted.** The agent found the CLI and shipped itself to production.
+5. **Deploy to Vercel â€” unprompted.** The agent found the CLI and shipped itself to production.
 
 ## Why it's fast enough to matter
 
-Kimi K3.1 Pro on Cerebras streams at up to ~2,000 tokens/sec. The entire 65 KB rebuild generated in under two minutes of visible streaming — the design process became watchable, which is the difference between a tool demo and a demo people share.
+Kimi K3.1 Pro on Cerebras streams at up to ~2,000 tokens/sec. The entire 65 KB rebuild generated in under two minutes of visible streaming â€” the design process became watchable, which is the difference between a tool demo and a demo people share.
 
 ## Files
 
 | File | Purpose |
 |---|---|
+| `demo.mp4` | The launch film - art-directed and rendered by the agent itself (39s) |
 | `index.html` | The rebuilt site (also deployed live) |
 | `before/rustic-roasters.html` | The deliberately-dated input site |
 | `DESIGN.md` | The design system the agent wrote about its own work |
@@ -48,6 +49,6 @@ Paste `OPENCLAW_PROMPT.md` into a fresh session pointing at `before/`.
 
 - Long agent sessions on rate-limited providers die at compaction, not at inference: the summarization call itself gets 429'd. Fresh chat per task + file-based memory (`workspace/memory/`) beats heroics.
 - Budget output tokens deliberately (16k vs 40k) to keep prompt headroom.
-- The best demo moment is the one the agent creates by accident — we didn't script the deploy.
+- The best demo moment is the one the agent creates by accident â€” we didn't script the deploy.
 
 MIT License.
